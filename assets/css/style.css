@@ -29,8 +29,18 @@ section:not(:nth-last-of-type(1)) {
     margin-bottom: 20px;
 }
 
-.card-footer {
+.mdi-lg {
+    font-size: 20px;
+}
+
+.card-footer,
+.skill-col {
     display: flex;
+}
+
+.skill-col {
+    text-transform: uppercase;
+    font-weight: bolder;
 }
 
 .alignleft {

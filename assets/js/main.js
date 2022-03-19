@@ -47,6 +47,22 @@ function projectSection(data) {
     section.append(HTML);
 }
 
+function skillSection(data) {
+    var HTML = "";
+    var section = $("#skill-section");
+    for (var i in data) {
+        HTML += "<div class='col-lg-3 col-md-6 col-sm-12 mb-4'>\
+                    <div class='card'>\
+                        <div class='card-body skill-col'>\
+                            <div class='col-4 alignleft'>" + data[i]["name"] + "</div>\
+                            <div class='col-4 alignright'><img src='" + data[i]["image"] + "' height='25px'></div>\
+                        </div>\
+                    </div>\
+                </div>";
+    }
+    section.append(HTML);
+}
+
 function blogSection(data) {
     var HTML = "";
     var section = $("#blog-section");
@@ -65,9 +81,9 @@ function blogSection(data) {
                             <a href='" + data[i]["url"] + "' class='btn btn-primary'>Read More</a>\
                         </div>\
                         <div class='card-footer text-muted'>\
-                            <div class='col-4 alignleft'><i class='far fa-calendar-alt'></i> " + data[i]["created"] + "</div>\
-                            <div class='col-4 aligncenter'><i class='fa fa-eye'></i> " + data[i]["views"] + "</div>\
-                            <div class='col-4 alignright'><i class='fa fa-comment'></i> " + data[i]["comments"] + "</div>\
+                            <div class='col-4 alignleft'><i class='mdi mdi-calendar'></i> " + data[i]["created"] + "</div>\
+                            <div class='col-4 aligncenter'><i class='mdi mdi-eye'></i> " + data[i]["views"] + "</div>\
+                            <div class='col-4 alignright'><i class='mdi mdi-comment'></i> " + data[i]["comments"] + "</div>\
                         </div>\
                     </div>\
                 </div>";
@@ -119,7 +135,7 @@ $("#goto-contact").click(function() {
 
 // Add Active Class to Menu
 $(function() {
-    $('.nav-link').on('click', function(e) {
+    $('.nav-link-cus').on('click', function(e) {
         e.preventDefault()
         oldObjChild = $('.active > a'); //gets active nav-item child nav-link
         oldObj = $('.active'); //gets the active nav-item

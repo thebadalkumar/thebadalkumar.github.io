@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BADAL KUMAR</title>
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css" rel="stylesheet" />
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css" rel="stylesheet" /> -->
+    <link id="dark-theme-style" rel="stylesheet" href="assets/css/mdb-dark.css" />
     <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 
@@ -20,23 +21,28 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="" alt="BADAL KUMAR" draggable="false" /></a>
+                <a class="navbar-brand" href="#">BADAL KUMAR</a>
                 <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
+                    <i class="mdi mdi-menu"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item" onclick="toggleTheme()">
+                            <a class="nav-link">
+                                <i id="theme-toggler" class="mdi mdi-white-balance-sunny"></i>
+                            </a>
+                        </li>
                         <li class="nav-item active">
-                            <a class="nav-link mx-2" id="goto-home">Home</a>
+                            <a class="nav-link nav-link-cus mx-2" id="goto-home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" id="goto-about">About</a>
+                            <a class="nav-link nav-link-cus mx-2" id="goto-about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" id="goto-projects">Projects</a>
+                            <a class="nav-link nav-link-cus mx-2" id="goto-projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" id="goto-blogs">Blogs</a>
+                            <a class="nav-link nav-link-cus mx-2" id="goto-blogs">Blogs</a>
                         </li>
                         <li class="nav-item ms-3">
                             <a class="btn btn-primary btn-rounded" id="goto-contact">Contact</a>
@@ -70,6 +76,10 @@
             <section>
                 <h4 class="mb-5 text-center"><strong>ABOUT</strong></h4>
                 <div class="row" id="about-section">
+                    <!-- About Section -->
+                </div>
+                <div class="row" id="skill-section">
+                    <!-- Skill Section -->
                 </div>
             </section>
 
@@ -151,31 +161,13 @@
     <!--Main layout-->
 
     <footer class="bg-dark text-center text-white">
-        <!-- Grid container -->
         <div class="container p-4 pb-0">
-            <!-- Section: Social media -->
             <section class="mb-4">
-                <!-- Facebook -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-
-                <!-- Twitter -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-
-                <!-- Google -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
-
-                <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-
-                <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-
-                <!-- Github -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="mdi mdi-instagram mdi-lg"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="mdi mdi-linkedin mdi-lg"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="mdi mdi-github mdi-lg"></i></a>
             </section>
-            <!-- Section: Social media -->
         </div>
-        <!-- Grid container -->
 
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
@@ -189,6 +181,7 @@
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/theme-switcher.js"></script>
     <!--Custom Javascript-->
     <script>
         var PROJECT = [{
@@ -197,28 +190,28 @@
             "content": "Content 1",
             "img": "",
             "views": 12,
-            "url": "https://google.com"
+            "url": ""
         }, {
             "id": 2,
             "title": "Title 2",
             "content": "Content 2",
             "img": "",
             "views": 12,
-            "url": "https://google.com"
+            "url": ""
         }, {
             "id": 3,
             "title": "Title 3",
             "content": "Content 3",
             "img": "",
             "views": 12,
-            "url": "https://google.com"
+            "url": ""
         }, {
             "id": 4,
             "title": "Title 4",
             "content": "Content 4",
             "img": "",
             "views": 12,
-            "url": "https://google.com"
+            "url": ""
         }];
         var BLOG = [{
             "id": 1,
@@ -226,9 +219,9 @@
             "content": "Content 1",
             "img": "",
             "created": "12/12/22",
-            "views": 10,
-            "comments": 10,
-            "url": "https://google.com"
+            "views": 1000,
+            "comments": 10000,
+            "url": ""
         }, {
             "id": 2,
             "title": "Title 2",
@@ -237,7 +230,7 @@
             "created": "12/12/22",
             "views": 10,
             "comments": 10,
-            "url": "https://google.com"
+            "url": ""
         }, {
             "id": 3,
             "title": "Title 3",
@@ -246,7 +239,7 @@
             "created": "12/12/22",
             "views": 10,
             "comments": 10,
-            "url": "https://google.com"
+            "url": ""
         }, {
             "id": 4,
             "title": "Title 4",
@@ -255,10 +248,53 @@
             "created": "12/12/22",
             "views": 10,
             "comments": 10,
-            "url": "https://google.com"
+            "url": ""
+        }];
+
+        var LANG = [{
+            "id": 1,
+            "name": "Python",
+            "image": "https://www.python.org/static/favicon.ico",
+            "color": "",
+        }, {
+            "id": 2,
+            "name": "Javascript",
+            "image": "https://freesvg.org/img/js_logo.png",
+            "color": "",
+        }, {
+            "id": 3,
+            "name": "HTML/CSS",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+            "color": "",
+        }, {
+            "id": 4,
+            "name": "PHP",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
+            "color": "",
+        }, {
+            "id": 5,
+            "name": "Git",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg",
+            "color": "",
+        }, {
+            "id": 6,
+            "name": "MS Office",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Microsoft_Office_logo_%282019%E2%80%93present%29.svg",
+            "color": "",
+        }, {
+            "id": 7,
+            "name": "SQL",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Applications-database.svg",
+            "color": "",
+        }, , {
+            "id": 8,
+            "name": "XML/json",
+            "image": "https://cdn.worldvectorlogo.com/logos/json.svg",
+            "color": "",
         }];
 
         $(document).ready(function() {
+            skillSection(LANG);
             projectSection(PROJECT);
             blogSection(BLOG);
         });
