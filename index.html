@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BADAL KUMAR</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header id="root-section">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="" alt="BADAL KUMAR" draggable="false" /></a>
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item active">
+                            <a class="nav-link mx-2" id="goto-home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" id="goto-about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" id="goto-projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" id="goto-blogs">Blogs</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="btn btn-primary btn-rounded" id="goto-contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar -->
+
+        <!-- Background image -->
+        <div id="intro" class="bg-image shadow-2-strong">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.4);">
+                <div class="container d-flex align-items-center justify-content-center text-center h-100">
+                    <div class="text-white">
+                        <h1 class="mb-3">Learn Bootstrap 5 with MDB</h1>
+                        <h5 class="mb-4">Best & free guide of responsive web design</h5>
+                        <a class="btn btn-outline-light btn-lg m-2" href="https://www.youtube.com/watch?v=c9B4TPnak1A" role="button" rel="nofollow" target="_blank">Start tutorial</a>
+                        <a class="btn btn-outline-light btn-lg m-2" href="https://mdbootstrap.com/docs/standard/" target="_blank" role="button">Download MDB UI KIT</a>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+            <!-- Background image -->
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main class="my-5">
+        <div class="container">
+            <section>
+                <h4 class="mb-5 text-center"><strong>ABOUT</strong></h4>
+                <div class="row" id="about-section">
+                </div>
+            </section>
+
+            <section>
+                <h4 class="mb-5 text-center"><strong>PROJECTS</strong></h4>
+                <div class="row" id="project-section">
+                    <!--PROJECT SECTION from API-->
+                </div>
+            </section>
+
+            <section>
+                <h4 class="mb-5 text-center"><strong>BLOGS</strong></h4>
+                <div class="row" id="blog-section">
+                    <!--BLOG SECTION from API-->
+                </div>
+            </section>
+
+            <section>
+                <h4 class="mb-5 text-center"><strong>CONTACT US</strong></h4>
+                <div class="row" id="contact-section">
+                    <div class="col-md-6 d-none d-md-block d-lg-block">
+                        <img src="assets/images/contact.svg" height="360" alt="Wild Landscape" />
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <form class="text-center" id="contactusFrm">
+                            <!-- Name input -->
+                            <div class="form-outline mb-4">
+                                <input type="text" name="name" class="form-control" required>
+                                <label class="form-label" for="custom-validation-name" style="margin-left: 0px;">Name</label>
+                                <div class="form-notch">
+                                    <div class="form-notch-leading" style="width: 9px;"></div>
+                                    <div class="form-notch-middle" style="width: 42.4px;"></div>
+                                    <div class="form-notch-trailing"></div>
+                                </div>
+                            </div>
+
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <input type="email" name="email" class="form-control" required>
+                                <label class="form-label" for="custom-validation-email" style="margin-left: 0px;">Email address</label>
+                                <div class="form-notch">
+                                    <div class="form-notch-leading" style="width: 9px;"></div>
+                                    <div class="form-notch-middle" style="width: 88.8px;"></div>
+                                    <div class="form-notch-trailing"></div>
+                                </div>
+                            </div>
+
+                            <!-- Subject input -->
+                            <div class="form-outline mb-4">
+                                <input type="text" name="subject" class="form-control" required>
+                                <label class="form-label" for="custom-validation-subject" style="margin-left: 0px;">Subject</label>
+                                <div class="form-notch">
+                                    <div class="form-notch-leading" style="width: 9px;"></div>
+                                    <div class="form-notch-middle" style="width: 50.4px;"></div>
+                                    <div class="form-notch-trailing"></div>
+                                </div>
+                            </div>
+
+                            <!-- Message input -->
+                            <div class="form-outline mb-4">
+                                <textarea class="form-control" name="message" rows="4" required></textarea>
+                                <label class="form-label" for="custom-validation-message" style="margin-left: 0px;">Message</label>
+                                <div class="form-notch">
+                                    <div class="form-notch-leading" style="width: 9px;"></div>
+                                    <div class="form-notch-middle" style="width: 60px;"></div>
+                                    <div class="form-notch-trailing"></div>
+                                </div>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button class="btn btn-primary btn-block mb-4">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <!--Main layout-->
+
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <!--Custom Javascript-->
+    <script>
+        var PROJECT = [{
+            "id": 1,
+            "title": "Title 1",
+            "content": "Content 1",
+            "img": "",
+            "views": 12,
+            "url": "https://google.com"
+        }, {
+            "id": 2,
+            "title": "Title 2",
+            "content": "Content 2",
+            "img": "",
+            "views": 12,
+            "url": "https://google.com"
+        }, {
+            "id": 3,
+            "title": "Title 3",
+            "content": "Content 3",
+            "img": "",
+            "views": 12,
+            "url": "https://google.com"
+        }, {
+            "id": 4,
+            "title": "Title 4",
+            "content": "Content 4",
+            "img": "",
+            "views": 12,
+            "url": "https://google.com"
+        }];
+        var BLOG = [{
+            "id": 1,
+            "title": "Title 1",
+            "content": "Content 1",
+            "img": "",
+            "created": "12/12/22",
+            "views": 10,
+            "comments": 10,
+            "url": "https://google.com"
+        }, {
+            "id": 2,
+            "title": "Title 2",
+            "content": "Content 2",
+            "img": "",
+            "created": "12/12/22",
+            "views": 10,
+            "comments": 10,
+            "url": "https://google.com"
+        }, {
+            "id": 3,
+            "title": "Title 3",
+            "content": "Content 3",
+            "img": "",
+            "created": "12/12/22",
+            "views": 10,
+            "comments": 10,
+            "url": "https://google.com"
+        }, {
+            "id": 4,
+            "title": "Title 4",
+            "content": "Content 4",
+            "img": "",
+            "created": "12/12/22",
+            "views": 10,
+            "comments": 10,
+            "url": "https://google.com"
+        }];
+
+        $(document).ready(function() {
+            projectSection(PROJECT);
+            blogSection(BLOG);
+        });
+
+        $("#contactusFrm").submit(function() {
+            formSubmit($(this), "/");
+            return false;
+        });
+    </script>
+</body>
+
+</html>

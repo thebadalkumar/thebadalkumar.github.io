@@ -1,0 +1,49 @@
+/* INTRO Settings */
+
+#intro {
+    /* Margin to fix overlapping fixed navbar */
+    margin-top: 58px;
+    height: calc(100vh - 58px);
+    background-image: url("../../assets/images/intro.png");
+}
+
+@media (max-width: 991px) {
+    #intro {
+        /* Margin to fix overlapping fixed navbar */
+        margin-top: 45px;
+    }
+}
+
+a {
+    cursor: pointer;
+}
+
+.active .nav-link {
+    color: green !important;
+}
+
+
+/* Section Settings */
+
+section:not(:nth-last-of-type(1)) {
+    margin-bottom: 20px;
+}
+
+.card-footer {
+    display: flex;
+}
+
+.alignleft {
+    flex: 1;
+    text-align: left;
+}
+
+.aligncenter {
+    flex: 1;
+    text-align: center;
+}
+
+.alignright {
+    flex: 1;
+    text-align: right;
+}
