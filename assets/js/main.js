@@ -55,7 +55,7 @@ function skillSection(data) {
                     <div class='card'>\
                         <div class='card-body skill-col'>\
                             <div class='col-4 alignleft'>" + data[i]["name"] + "</div>\
-                            <div class='col-4 alignright'><img src='" + data[i]["image"] + "' height='25px'></div>\
+                            <div class='col-4 alignright'><img src='assets/images/skills/" + data[i]["image"] + "' height='25px'></div>\
                         </div>\
                     </div>\
                 </div>";
