@@ -71,18 +71,18 @@ function blogSection(data) {
                     <div class='card'>\
                         <div class='bg-image hover-overlay ripple' data-mdb-ripple-color='light'>\
                             <img src='https://mdbootstrap.com/img/new/standard/nature/002.jpg' class='img-fluid' />\
-                            <a href='" + data[i]["url"] + "'>\
+                            <a href='" + data[i]["id"] + "'>\
                                 <div class='mask' style='background-color: rgba(251, 251, 251, 0.15);'></div>\
                             </a>\
                         </div>\
                         <div class='card-body'>\
                             <h5 class='card-title'>" + data[i]["title"] + "</h5>\
-                            <p class='card-text'>" + data[i]["content"] + "</p>\
-                            <a href='" + data[i]["url"] + "' class='btn btn-primary'>Read More</a>\
+                            <p class='card-text'>" + data[i]["body"] + "</p>\
+                            <a href='" + data[i]["id"] + "' class='btn btn-primary'>Read More</a>\
                         </div>\
                         <div class='card-footer text-muted'>\
                             <div class='col-4 alignleft'><i class='mdi mdi-calendar'></i> " + data[i]["created"] + "</div>\
-                            <div class='col-4 aligncenter'><i class='mdi mdi-eye'></i> " + data[i]["views"] + "</div>\
+                            <div class='col-4 aligncenter'><i class='mdi mdi-eye'></i> 100</div>\
                             <div class='col-4 alignright'><i class='mdi mdi-comment'></i> " + data[i]["comments"] + "</div>\
                         </div>\
                     </div>\

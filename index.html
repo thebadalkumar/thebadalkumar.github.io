@@ -306,7 +306,21 @@
         $(document).ready(function() {
             skillSection(LANG);
             projectSection(PROJECT);
-            blogSection(BLOG);
+            $.ajax({
+                type: 'GET',
+                headers: {
+                    "Access-Control-Allow-Origin": "*"
+                },
+                url: "https://thebadalkumarblogs.herokuapp.com/posts/",
+                dataType: 'json',
+                success: function(data) {
+                    blogSection(data);
+                },
+                error: function() {
+                    console.log("err");
+                }
+            });
+            //(BLOG);
         });
 
         $("#contactusFrm").submit(function() {
