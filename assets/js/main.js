@@ -6,12 +6,21 @@ function objectifyForm(formArray) {
     return returnArray;
 }
 
+function getQueryParam(param, defaultValue = undefined) {
+    location.search.substr(1)
+        .split("&")
+        .some(function(item) { // returns first occurence and stops
+            return item.split("=")[0] == param && (defaultValue = item.split("=")[1], true)
+        })
+    return defaultValue
+}
+
 function formatDatetime(datetime) {
 
     var mydate = new Date(datetime);
     var thedate = mydate.getDate();
     var month = mydate.getMonth();
-    var year = mydate.getFullYear();
+    var year = mydate.getFullYear().toString().substr(-2);
 
     if (month + 1 < 10) {
         month = "0" + (month + 1);
@@ -21,7 +30,7 @@ function formatDatetime(datetime) {
         thedate = "0" + thedate;
     }
 
-    return year + "/" + month + "/" + thedate;
+    return thedate + "/" + month + "/" + year;
 }
 
 function projectSection(data) {
@@ -63,32 +72,41 @@ function skillSection(data) {
     section.append(HTML);
 }
 
-function blogSection(data) {
+function blogSection(data, section) {
     var HTML = "";
-    var section = $("#blog-section");
+    var section = $("#" + section);
     for (var i in data) {
         HTML += "<div class='col-lg-3 col-md-6 col-sm-12 mb-4'>\
                     <div class='card'>\
                         <div class='bg-image hover-overlay ripple' data-mdb-ripple-color='light'>\
                             <img src='https://mdbootstrap.com/img/new/standard/nature/002.jpg' class='img-fluid' />\
-                            <a href='" + data[i]["id"] + "'>\
+                            <a href='blog.html?id=" + data[i]["id"] + "'>\
                                 <div class='mask' style='background-color: rgba(251, 251, 251, 0.15);'></div>\
                             </a>\
                         </div>\
                         <div class='card-body'>\
                             <h5 class='card-title'>" + data[i]["title"] + "</h5>\
                             <p class='card-text'>" + data[i]["body"] + "</p>\
-                            <a href='" + data[i]["id"] + "' class='btn btn-primary'>Read More</a>\
+                            <a href='blog.html?id=" + data[i]["id"] + "' class='btn btn-primary'>Read More</a>\
                         </div>\
                         <div class='card-footer text-muted'>\
-                            <div class='col-4 alignleft'><i class='mdi mdi-calendar'></i> " + data[i]["created"] + "</div>\
+                            <div class='col-4 alignleft'><i class='mdi mdi-calendar'></i> " + formatDatetime(data[i]["created"]) + "</div>\
                             <div class='col-4 aligncenter'><i class='mdi mdi-eye'></i> 100</div>\
                             <div class='col-4 alignright'><i class='mdi mdi-comment'></i> " + data[i]["comments"] + "</div>\
                         </div>\
                     </div>\
                 </div>";
     }
-    section.append(HTML);
+    section.html(HTML);
+}
+
+function readBlog(data, section, heading) {
+    var HTML = "";
+    var section = $("#" + section);
+    $("#" + heading).html(data["title"]);
+
+    HTML += data["body"];
+    section.html(HTML);
 }
 
 function formSubmit(frm, url, respEle) {
