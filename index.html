@@ -308,10 +308,7 @@
             projectSection(PROJECT);
             $.ajax({
                 type: 'GET',
-                headers: {
-                    "Access-Control-Allow-Origin": "*"
-                },
-                url: "https://thebadalkumarblogs.herokuapp.com/posts/",
+                url: "http://127.0.0.1:8000/posts/",
                 dataType: 'json',
                 success: function(data) {
                     blogSection(data);
