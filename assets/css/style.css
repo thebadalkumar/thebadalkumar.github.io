@@ -1,15 +1,23 @@
 /* INTRO Settings */
 
-#intro {
+.intro-light {
     /* Margin to fix overlapping fixed navbar */
     margin-top: 58px;
     height: calc(100vh - 58px);
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
-    background: -moz-linear-gradient(to left, #8f94fb, #4e54c8);
+    background-color: #5067df;
+}
+
+.intro-dark {
+    /* Margin to fix overlapping fixed navbar */
+    margin-top: 58px;
+    height: calc(100vh - 58px);
+    background-color: #424242;
+    /* background-color: #303030; */
 }
 
 @media (max-width: 991px) {
-    #intro {
+    .intro-dark,
+    .intro-light {
         /* Margin to fix overlapping fixed navbar */
         margin-top: 45px;
     }
