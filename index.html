@@ -43,9 +43,9 @@
                         <li class="nav-item">
                             <a class="nav-link nav-link-cus mx-2" id="goto-projects">Projects</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link nav-link-cus mx-2" id="goto-blogs">Blogs</a>
-                        </li>
+                        </li> Will inclide in future-->
                         <li class="nav-item ms-3">
                             <a class="btn btn-primary nav-link-cus btn-rounded" id="goto-contact">Contact</a>
                         </li>
@@ -104,12 +104,12 @@
                 </div>
             </section>
 
-            <section>
+            <!-- <section>
                 <h4 class="mb-5 text-center"><strong>BLOGS</strong></h4>
-                <div class="row" id="blog-section">
-                    <!--BLOG SECTION from API-->
-                </div>
-            </section>
+                <div class="row" id="blog-section">-->
+            <!--BLOG SECTION from API Will inclide in future-->
+            <!-- </div>
+            </section> -->
 
             <section>
                 <h4 class="mb-5 text-center"><strong>CONTACT</strong></h4>
@@ -201,6 +201,7 @@
     <script type="text/javascript" src="assets/js/theme-switcher.js"></script>
     <!--Custom Javascript-->
     <script>
+        // Later this will be call from an API
         var PROJECT = [{
             "id": 1,
             "title": "IP Camera Monitoring",
@@ -229,45 +230,23 @@
             "img": "",
             "views": 12,
             "url": ""
-        }];
-        var BLOG = [{
-            "id": 1,
-            "title": "Title 1",
-            "content": "Content 1",
+        }, {
+            "id": 5,
+            "title": "GGSIPU Result Explorer",
+            "content": "Content 5",
             "img": "",
-            "created": "12/12/22",
-            "views": 1000,
-            "comments": 10000,
+            "views": 12,
             "url": ""
         }, {
-            "id": 2,
-            "title": "Title 2",
-            "content": "Content 2",
+            "id": 6,
+            "title": "Snippets Sharing",
+            "content": "Content 6",
             "img": "",
-            "created": "12/12/22",
-            "views": 10,
-            "comments": 10,
-            "url": ""
-        }, {
-            "id": 3,
-            "title": "Title 3",
-            "content": "Content 3",
-            "img": "",
-            "created": "12/12/22",
-            "views": 10,
-            "comments": 10,
-            "url": ""
-        }, {
-            "id": 4,
-            "title": "Title 4",
-            "content": "Content 4",
-            "img": "",
-            "created": "12/12/22",
-            "views": 10,
-            "comments": 10,
+            "views": 12,
             "url": ""
         }];
 
+        // Later this will be call from an API
         var LANG = [{
             "id": 1,
             "name": "Python",
@@ -333,18 +312,17 @@
         $(document).ready(function() {
             skillSection(LANG);
             projectSection(PROJECT);
-            $.ajax({
-                type: 'GET',
-                url: "https://thebadalkumarblogs.herokuapp.com/posts/",
-                dataType: 'json',
-                success: function(data) {
-                    blogSection(data, "blog-section");
-                },
-                error: function() {
-                    console.log("err");
-                }
-            });
-            //(BLOG);
+            // $.ajax({
+            //     type: 'GET',
+            //     url: "https://thebadalkumarblogs.herokuapp.com/posts/",
+            //     dataType: 'json',
+            //     success: function(data) {
+            //         blogSection(data, "blog-section");
+            //     },
+            //     error: function() {
+            //         console.log("err");
+            //     }
+            // });
         });
 
         const scriptURL = 'https://script.google.com/macros/s/AKfycbweSv8RpAlPP0GGuiVXEMQQ5uLTW_LCrfqw3oeCSKNEwlYzlEoDkSah2RshNdqLliNF9Q/exec';
