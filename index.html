@@ -11,7 +11,6 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css" rel="stylesheet" /> -->
     <link id="dark-theme-style" rel="stylesheet" href="assets/css/mdb.css" />
     <link href="assets/css/style.css" rel="stylesheet" />
 </head>
@@ -45,7 +44,7 @@
                             <a class="nav-link nav-link-cus mx-2" id="goto-blogs">Blogs</a>
                         </li>
                         <li class="nav-item ms-3">
-                            <a class="btn btn-primary btn-rounded" id="goto-contact">Contact</a>
+                            <a class="btn btn-primary nav-link-cus btn-rounded" id="goto-contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -108,13 +107,13 @@
             </section>
 
             <section>
-                <h4 class="mb-5 text-center"><strong>CONTACT US</strong></h4>
+                <h4 class="mb-5 text-center"><strong>CONTACT</strong></h4>
                 <div class="row" id="contact-section">
                     <div class="col-md-6 d-none d-md-block d-lg-block">
                         <img src="assets/images/contact.svg" height="360" alt="Wild Landscape" />
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <form class="text-center" id="contactusFrm">
+                        <form class="text-center" name="google-sheet">
                             <!-- Name input -->
                             <div class="form-outline mb-4">
                                 <input type="text" name="name" class="form-control" autocomplete="off" required>
@@ -160,7 +159,7 @@
                             </div>
 
                             <!-- Submit button -->
-                            <button class="btn btn-primary btn-block mb-4">Send</button>
+                            <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
                         </form>
                     </div>
                 </div>
@@ -191,6 +190,7 @@
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="assets/js/theme-switcher.js"></script>
     <!--Custom Javascript-->
     <script>
@@ -273,7 +273,7 @@
             "color": "",
         }, {
             "id": 3,
-            "name": "HTML/CSS",
+            "name": "HTML/ CSS",
             "image": "HTML5_logo_and_wordmark.svg",
             "color": "",
         }, {
@@ -298,8 +298,28 @@
             "color": "",
         }, , {
             "id": 8,
-            "name": "XML/json",
-            "image": "json.svg",
+            "name": "XML/ JSON/ YAML",
+            "image": "xml.svg",
+            "color": "",
+        }, {
+            "id": 9,
+            "name": "Linux",
+            "image": "linux.png",
+            "color": "",
+        }, {
+            "id": 10,
+            "name": "CMS",
+            "image": "cms.png",
+            "color": "",
+        }, {
+            "id": 11,
+            "name": "Django",
+            "image": "django.svg",
+            "color": "",
+        }, {
+            "id": 12,
+            "name": "Shell Scripting",
+            "image": "shell.png",
             "color": "",
         }];
 
@@ -320,10 +340,21 @@
             //(BLOG);
         });
 
-        $("#contactusFrm").submit(function() {
-            formSubmit($(this), "/");
-            return false;
-        });
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbweSv8RpAlPP0GGuiVXEMQQ5uLTW_LCrfqw3oeCSKNEwlYzlEoDkSah2RshNdqLliNF9Q/exec';
+        const form = document.forms['google-sheet'];
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => Swal.fire({
+                    text: 'Thank you for contacting me, I\'ll soon get in touch with you.',
+                    icon: 'info',
+                }))
+                .catch(error => console.error('Error!', error.message))
+        })
     </script>
 </body>
 
