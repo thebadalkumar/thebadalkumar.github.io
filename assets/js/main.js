@@ -150,6 +150,9 @@ $("#goto-blogs").click(function() {
 $("#goto-contact").click(function() {
     scrollToEle("contact-section");
 });
+$("#goto-contact1").click(function() {
+    scrollToEle("contact-section");
+});
 
 // Add Active Class to Menu
 $(function() {
