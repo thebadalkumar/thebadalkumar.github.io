@@ -34,8 +34,11 @@
                         <li class="nav-item active">
                             <a class="nav-link nav-link-cus mx-2" id="goto-home">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link nav-link-cus mx-2" id="goto-about">About</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-cus mx-2" id="goto-skills">Skills</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link nav-link-cus mx-2" id="goto-projects">Projects</a>
@@ -82,11 +85,13 @@
     <!--Main layout-->
     <main class="my-5">
         <div class="container">
-            <section>
+            <!-- <section>
                 <h4 class="mb-5 text-center"><strong>ABOUT</strong></h4>
                 <div class="row" id="about-section">
-                    <!-- About Section -->
                 </div>
+            </section> -->
+            <section>
+                <h4 class="mb-5 text-center"><strong>MY SKILLS</strong></h4>
                 <div class="row" id="skill-section">
                     <!-- Skill Section -->
                 </div>
@@ -172,9 +177,11 @@
     <footer class="bg-dark text-center text-white">
         <div class="container p-4 pb-0">
             <section class="mb-4">
-                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagra.com/badalkumar_" role="button"><i class="mdi mdi-instagram mdi-lg"></i></a>
                 <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/thebadalkumar" role="button"><i class="mdi mdi-linkedin mdi-lg"></i></a>
                 <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/thebadalkumar" role="button"><i class="mdi mdi-github mdi-lg"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="mailto:thebadalkumar@zohomail.com" role="button"><i class="mdi mdi-email-outline mdi-lg"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagra.com/badalkumar_" role="button"><i class="mdi mdi-instagram mdi-lg"></i></a>
+            </section>
             </section>
         </div>
 
@@ -196,28 +203,28 @@
     <script>
         var PROJECT = [{
             "id": 1,
-            "title": "Title 1",
+            "title": "IP Camera Monitoring",
             "content": "Content 1",
             "img": "",
             "views": 12,
             "url": ""
         }, {
             "id": 2,
-            "title": "Title 2",
+            "title": "Network Device Monitoring",
             "content": "Content 2",
             "img": "",
             "views": 12,
             "url": ""
         }, {
             "id": 3,
-            "title": "Title 3",
+            "title": "Website Monitoring",
             "content": "Content 3",
             "img": "",
             "views": 12,
             "url": ""
         }, {
             "id": 4,
-            "title": "Title 4",
+            "title": "Telegram Bot",
             "content": "Content 4",
             "img": "",
             "views": 12,
@@ -296,32 +303,32 @@
             "name": "SQL",
             "image": "Applications-database.svg",
             "color": "",
-        }, , {
-            "id": 8,
-            "name": "XML/ JSON/ YAML",
-            "image": "xml.svg",
-            "color": "",
         }, {
-            "id": 9,
+            "id": 8,
             "name": "Linux",
             "image": "linux.png",
             "color": "",
         }, {
-            "id": 10,
+            "id": 9,
             "name": "CMS",
             "image": "cms.png",
             "color": "",
         }, {
-            "id": 11,
+            "id": 10,
             "name": "Django",
             "image": "django.svg",
             "color": "",
         }, {
-            "id": 12,
+            "id": 11,
             "name": "Shell Scripting",
             "image": "shell.png",
             "color": "",
-        }];
+        }, {
+            "id": 12,
+            "name": "JSON/ YAML",
+            "image": "xml.svg",
+            "color": "",
+        }, ];
 
         $(document).ready(function() {
             skillSection(LANG);

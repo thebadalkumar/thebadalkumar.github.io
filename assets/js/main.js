@@ -60,7 +60,7 @@ function skillSection(data) {
     var HTML = "";
     var section = $("#skill-section");
     for (var i in data) {
-        HTML += "<div class='col-lg-3 col-md-6 col-sm-12 mb-4'>\
+        HTML += "<div class='col-6 col-lg-3 mb-4'>\
                     <div class='card'>\
                         <div class='card-body skill-col'>\
                             <div class='col-4 alignleft'>" + data[i]["name"] + "</div>\
@@ -140,6 +140,9 @@ $("#goto-home").click(function() {
 });
 $("#goto-about").click(function() {
     scrollToEle("about-section");
+});
+$("#goto-skills").click(function() {
+    scrollToEle("skill-section");
 });
 $("#goto-projects").click(function() {
     scrollToEle("project-section");

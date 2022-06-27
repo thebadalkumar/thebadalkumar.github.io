@@ -163,7 +163,7 @@ section:not(:nth-last-of-type(1)) {
 }
 
 .skill-col {
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: bolder;
 }
 
