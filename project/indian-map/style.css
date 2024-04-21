@@ -1,0 +1,60 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    display: table;
+    width: 100%;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 1%;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+#india {
+    stroke: #101010;
+    stroke-width: .1;
+}
+
+div#tooltip {
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 15px 10px;
+    opacity: 0.8;
+}
+
+footer {
+    min-height: 50px;
+    background: PapayaWhip;
+    text-align: center;
+}
+
+body>footer {
+    display: table-row;
+}
