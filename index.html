@@ -2,25 +2,35 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RCJ5X4KE7L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-RCJ5X4KE7L');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon" href="assets/images/icon.jpg" type="image/jpeg" />
-    <link rel="icon" href="assets/images/icon.jpg" type="image/jpeg" />
+    <link rel="shortcut icon" href="/portfolio/assets/images/icon.png" type="image/jpeg" />
+    <link rel="icon" href="/portfolio/assets/images/icon.png" type="image/jpeg" />
     <title>Badal Kumar</title>
-    <meta name="description" content="A Python Developer building Web Applications, Packages and Libraries that leads to the success of the overall product" />
+    <meta name="description" content="A Full Stack Developer building Web Applications, Packages and Libraries that leads to the success of the overall product" />
     <meta name="author" content="Badal Kumar" />
     <meta name="theme-color" content="#4285f4">
     <meta property="og:title" content="Badal Kumar" />
     <meta property="og:site_name" content="Badal Kumar Portfolio Website" />
-    <meta property="og:url" content="https://me.codingroom.in/" />
-    <meta property="og:description" content="A Python Developer building Web Applications, Packages and Libraries that leads to the success of the overall product" />
+    <meta property="og:url" content="https://codingroom.in/badalkumar.html" />
+    <meta property="og:description" content="A Full Stack Developer building Web Applications, Packages and Libraries that leads to the success of the overall product" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://me.codingroom.in/assets/images/badal.png" />
-
-    <link href='assets/css/temp.css' rel='stylesheet' />
+    <meta property="og:image" content="https://codingroom.in/assets/portfolio/assets/images/badal.png" />
+    <link href='/portfolio/assets/css/temp.css' rel='stylesheet' />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
-
+    <link rel="manifest" href="/manifest.json">
 </head>
 
 <body>
@@ -28,28 +38,31 @@
         <div class="header__content">
             <div class="header__logo-container">
                 <div class="header__logo-img-cont">
-                    <img src="assets/images/icon.jpg" alt="Badal Kumar Logo Image" class="header__logo-img" />
+                    <img src="/portfolio/assets/images/icon.png" alt="Badal Kumar Logo Image" class="header__logo-img" />
                 </div>
-                <span class="header__logo-sub">Badal Kumar</span>
+                <span class="header__logo-sub text-white">Badal Kumar</span>
             </div>
             <div class="header__main">
                 <ul class="header__links">
                     <li class="header__link-wrapper homeM">
-                        <a class="header__link"> Home </a>
+                        <button class="header__link text-white">Home</button>
                     </li>
                     <li class="header__link-wrapper aboutM">
-                        <a class="header__link">About </a>
+                        <button class="header__link text-white">About</button>
                     </li>
-                    <li class="header__link-wrapper projectM">
-                        <a class="header__link"> Projects </a>
+                    <!--<li class="header__link-wrapper projectM">
+                        <button class="header__link text-white">Projects</button>
+                    </li>-->
+                    <li class="header__link-wrapper">
+                        <a href="/" class="header__link text-white">Blog</a>
                     </li>
-                    <!-- <li class="header__link-wrapper contactM">
-                        <a class="header__link"> Contact </a>
-                    </li> -->
+                    <li class="header__link-wrapper">
+                        <a href="https://linkedin.com/in/thebadalkumar" class="header__link text-white">Contact</a>
+                    </li>
                 </ul>
                 <div class="header__main-ham-menu-cont">
-                    <img src="assets/images/ham-menu.svg" alt="hamburger menu" class="header__main-ham-menu" />
-                    <img src="assets/images/ham-menu-close.svg" alt="hamburger menu close" class="header__main-ham-menu-close d-none" />
+                    <img src="/portfolio/assets/images/ham-menu.svg" alt="hamburger menu" class="header__main-ham-menu" />
+                    <img src="/portfolio/assets/images/ham-menu-close.svg" alt="hamburger menu close" class="header__main-ham-menu-close d-none" />
                 </div>
             </div>
         </div>
@@ -57,239 +70,126 @@
             <div class="header__sm-menu-content">
                 <ul class="header__sm-menu-links">
                     <li class="header__sm-menu-link homeM">
-                        <a> Home </a>
+                        <a>Home</a>
                     </li>
-
                     <li class="header__sm-menu-link aboutM">
-                        <a> About </a>
+                        <a>About</a>
                     </li>
-
-                    <li class="header__sm-menu-link projectM">
-                        <a> Projects </a>
+                    <!--<li class="header__sm-menu-link projectM">
+                        <a>Projects</a>
+                    </li>-->
+                    <li class="header__sm-menu-link">
+                        <a href="/">Blog</a>
                     </li>
-
-                    <!-- <li class="header__sm-menu-link contactM">
-                        <a> Contact </a>
-                    </li> -->
+                    <li class="header__sm-menu-link">
+                        <a href="https://linkedin.com/in/thebadalkumar">Contact</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </header>
     <section id="home" class="home-hero">
         <div class="home-hero__content">
-            <h1 class="heading-primary"><span>Hello, I'm</span><span> Badal Kumar</span></h1>
+            <h1 class="heading-primary text-white"><span>Hello, I'm</span><span> Badal Kumar</span></h1>
             <div class="home-hero__info">
-                <p class="text-primary">
-                    A Python Developer building Web Applications, Packages and Libraries that leads to the success of the overall product
+                <p class="text-primary text-white">
+                    A Full Stack Developer building Web Applications, Packages and Libraries that leads to the success of the overall product
                 </p>
             </div>
             <div class="home-hero__cta">
-                <a class="btn btn--bg projectM">Projects</a>
+                <a href="https://linkedin.com/in/thebadalkumar/" class="btn btn--bg projectM">Contact</a>
             </div>
         </div>
-        <div class="home-hero__mouse-scroll-cont">
+        <div class="home-hero__mouse-scroll-cont text-white">
             <div class="mouse"></div>
         </div>
     </section>
     <section id="about" class="about sec-pad">
         <div class="main-container">
             <h2 class="heading heading-sec heading-sec__mb-med">
-                <span class="heading-sec__main">About Me</span>
-                <span class="heading-sec__sub">
+                <span class="heading-sec__main text-white">About Me</span>
+                <span class="heading-sec__sub text-white">
                     Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology
                 </span>
             </h2>
             <div class="about__content">
                 <div class="about__content-main">
-                    <h3 class="about__content-title">Get to know me!</h3>
+                    <h3 class="about__content-title text-white">Get to know me!</h3>
                     <div class="about__content-details">
-                        <p class="about__content-details-para">
-                            Motivated <strong>Python Developer</strong> with 3+ years of experience. Highly skilled in <strong>Python</strong> coding and scripting, <strong>Django framework</strong>, and has excellent communication skills.
+                        <p class="about__content-details-para text-white">
+                            A motivated and enthusiastic <strong>Full Stack Developer</strong>, I specialize in building innovative <strong>Web Applications</strong>, <strong>Packages</strong>, and <strong>Libraries</strong> that contribute significantly
+                            to the success of overall products.
                         </p>
-                        <p class="about__content-details-para">
-                            I'm open to <strong>Job</strong> opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to
-                            <strong>contact</strong> me.
+                        <p class="about__content-details-para text-white">
+                            My expertise lies in crafting efficient, scalable solutions that meet the evolving needs of the tech industry. I have completed both my Graduation and Post Graduation from Guru Gobind Singh Indraprastha University.
                         </p>
                     </div>
                     <a href="https://linkedin.com/in/thebadalkumar" class="btn btn--med btn--theme contact-btn contactM">Contact</a>
+                    <a href="/portfolio/Badal_CV.pdf" class="btn btn--med btn--theme contact-btn contactM">Download CV</a>
                 </div>
                 <div class="about__content-skills">
-                    <h3 class="about__content-title">My Skills</h3>
+                    <h3 class="about__content-title text-white">My Skills</h3>
                     <div class="skills">
                         <div class="skills__skill">PYTHON</div>
                         <div class="skills__skill">DJANGO</div>
+                        <div class="skills__skill">API DEVELOPMENT</div>
                         <div class="skills__skill">HTML</div>
                         <div class="skills__skill">CSS</div>
-                        <div class="skills__skill">JAVASCRIPT</div>
-                        <div class="skills__skill">PHP</div>
-                        <div class="skills__skill">GIT</div>
-                        <div class="skills__skill">TERMINAL</div>
                         <div class="skills__skill">SQL</div>
-                        <div class="skills__skill">NETWORKS</div>
+                        <div class="skills__skill">SHELL SCRIPTING</div>
+                        <div class="skills__skill">JAVASCRIPT</div>
+                        <div class="skills__skill">GIT</div>
+                        <div class="skills__skill">CLOUD</div>
                         <div class="skills__skill">LINUX</div>
+                        <div class="skills__skill">SECURE SHELL</div>
+                        <div class="skills__skill">AJAX</div>
+                        <div class="skills__skill">NETWORKING</div>
                         <div class="skills__skill">MS OFFICE</div>
-                        <div class="skills__skill">REST API</div>
-                        <div class="skills__skill">JSON/ YAML</div>
+                        <div class="skills__skill">WEBSOCKET</div>
+                        <div class="skills__skill">DATABASE</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="projects" class="projects sec-pad">
-        <div class="main-container">
-            <h2 class="heading heading-sec heading-sec__mb-bg">
-                <span class="heading-sec__main">Projects</span>
-                <span class="heading-sec__sub">
-                    Here you will find some of the personal and clients projects that I've created
-                </span>
-            </h2>
-
-            <div class="projects__content">
-
-                <div class="wrapper">
-                    <article class="card">
-                        <img src="assets/images/1048232144.jpg.0.jpg" alt="" />
-                        <div class="projects__row-content">
-                            <h3 class="projects__row-content-title">IP Camera Monitoring</h3>
-                            <p class="projects__row-content-desc">
-                                Stream and Record IP Camera based on credentials.
-                            </p>
-                            <a href="https://linkedin.com/in/thebadalkumar" class="btn btn--med btn--theme dynamicBgClr">View Project</a>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <img src="assets/images/1048232144.jpg.0.jpg" alt="" />
-                        <div class="projects__row-content">
-                            <h3 class="projects__row-content-title">Network Device Monitoring</h3>
-                            <p class="projects__row-content-desc">
-                                Monitor Network devices using SNMP & SSH protocols.
-                            </p>
-                            <a href="https://linkedin.com/in/thebadalkumar" class="btn btn--med btn--theme dynamicBgClr">View Project</a>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <img src="assets/images/1048232144.jpg.0.jpg" alt="" />
-                        <div class="projects__row-content">
-                            <h3 class="projects__row-content-title">Website Monitoring</h3>
-                            <p class="projects__row-content-desc">
-                                Monitor website's Uptime, Downtime & Response rate.
-                            </p>
-                            <a href="https://linkedin.com/in/thebadalkumar" class="btn btn--med btn--theme dynamicBgClr">View Project</a>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <img src="assets/images/1048232144.jpg.0.jpg" alt="" />
-                        <div class="projects__row-content">
-                            <h3 class="projects__row-content-title">Task Automation</h3>
-                            <p class="projects__row-content-desc">
-                                Assign tasks to Bot and execute it on defined servers.
-                            </p>
-                            <a href="https://linkedin.com/in/thebadalkumar" class="btn btn--med btn--theme dynamicBgClr">View Project</a>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <img src="assets/images/1048232144.jpg.0.jpg" alt="" />
-                        <div class="projects__row-content">
-                            <h3 class="projects__row-content-title">System Info API</h3>
-                            <p class="projects__row-content-desc">
-                                Get information of server in JSON format through SSH.
-                            </p>
-                            <a href="https://linkedin.com/in/thebadalkumar" class="btn btn--med btn--theme dynamicBgClr">View Project</a>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <img src="assets/images/1048232144.jpg.0.jpg" alt="" />
-                        <div class="projects__row-content">
-                            <h3 class="projects__row-content-title">IPU Result Explorer</h3>
-                            <p class="projects__row-content-desc">
-                                Combined results of all semester marks and ranks.
-                            </p>
-                            <a href="https://linkedin.com/in/thebadalkumar" class="btn btn--med btn--theme dynamicBgClr">View Project</a>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <img src="assets/images/1048232144.jpg.0.jpg" alt="" />
-                        <div class="projects__row-content">
-                            <h3 class="projects__row-content-title">Files Adda</h3>
-                            <p class="projects__row-content-desc">
-                                Manage and Share uploaded files with short links.
-                            </p>
-                            <a href="https://linkedin.com/in/thebadalkumar" class="btn btn--med btn--theme dynamicBgClr">View Project</a>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <img src="assets/images/1048232144.jpg.0.jpg" alt="" />
-                        <div class="projects__row-content">
-                            <h3 class="projects__row-content-title">Snippets Sharing</h3>
-                            <p class="projects__row-content-desc">
-                                Share code links with auto syntax and file formatting.
-                            </p>
-                            <a href="https://linkedin.com/in/thebadalkumar" class="btn btn--med btn--theme dynamicBgClr">View Project</a>
-                        </div>
-                    </article>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- <section id="contact" class="contact sec-pad dynamicBg">
-        <div class="main-container">
-            <h2 class="heading heading-sec heading-sec__mb-med">
-                <span class="heading-sec__main heading-sec__main--lt">Contact</span>
-                <span class="heading-sec__sub heading-sec__sub--lt">
-                    Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
-                </span>
-            </h2>
-            <div class="contact__form-container">
-                <form action='' class='contact__form' method='post' enctype="text/plain">
-                    <div class="contact__form-field">
-                        <label class="contact__form-label">Name</label>
-                        <input required placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name" />
-                    </div>
-                    <div class="contact__form-field">
-                        <label class="contact__form-label">Email</label>
-                        <input required placeholder="Enter Your Email" type="email" class="contact__form-input" name="email" id="email" />
-                    </div>
-                    <div class="contact__form-field">
-                        <label class="contact__form-label">Message</label>
-                        <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message" name="message" id="message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn--theme contact__btn">Submit</button>
-                </form>
-            </div>
-        </div>
-    </section> -->
     <footer class="main-footer">
         <div class="main-container">
             <div class="main-footer__upper">
                 <div class="main-footer__row main-footer__row-1">
                     <h2 class="heading heading-sm main-footer__heading-sm">
-                        <span>Social</span>
+                        <span>Connect with me</span>
                     </h2>
                     <div class="main-footer__social-cont">
                         <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/thebadalkumar">
-                            <img class="main-footer__icon" src="assets/images/linkedin-ico.png" alt="Badal Kumar Linkedin Profile" />
+                            <img class="main-footer__icon" src="/portfolio/assets/images/linkedin.svg" alt="Linkedin Profile" />
                         </a>
-                        <a target="_blank" rel="noreferrer" href="https://github.com/thebadalkumar">
-                            <img class="main-footer__icon" src="assets/images/github-ico.png" alt="thebadalkumar Github Profile" />
+                        <a target="_blank" rel="noreferrer" href="mailto:thebadalkumar@zohomail.in">
+                            <img class="main-footer__icon" src="/portfolio/assets/images/email.svg" alt="Email" />
+                        </a>
+                        <a target="_blank" rel="noreferrer" href="https://www.instagram.com/roomofcode/">
+                            <img class="main-footer__icon" src="/portfolio/assets/images/insta.svg" alt="Instagram Profile" />
+                        </a>
+                        <a target="_blank" rel="noreferrer" href="/">
+                            <img class="main-footer__icon" src="/portfolio/assets/images/web.svg" alt="Coding Room" />
+                        </a>
+                        <a target="_blank" rel="noreferrer" href="https://www.youtube.com/@codingroom_">
+                            <img class="main-footer__icon" src="/portfolio/assets/images/yt.svg" alt="Youtube Channel" />
                         </a>
                     </div>
                 </div>
                 <div class="main-footer__row main-footer__row-2">
                     <h2 class="heading heading-sm text-lt">Badal Kumar</h2>
                     <p class="main-footer__short-desc">
-                        Motivated Python developer with 3+ years of experience. Highly skilled in Python coding, scripting and Django framework.
+                        A motivated Full Stack Developer, I specialize in building innovative Web Applications, Packages, and Libraries that contribute significantly to the success of overall products.
                     </p>
                 </div>
             </div>
-
             <div class="main-footer__lower">
-                Thank You! for visiting
+                Thank You for visiting!
             </div>
         </div>
     </footer>
-
-    <script src="assets/js/temp.js"></script>
+    <script src="/portfolio/assets/js/temp.js"></script>
 </body>
 
 </html>
